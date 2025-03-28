@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class movedplayer : MonoBehaviour
 {
-    public float horizontal;
-    public float vertical;
     public float speedx;
     public float speedy;
     private Rigidbody2D _compRigidbody2D;
@@ -53,6 +51,6 @@ public class movedplayer : MonoBehaviour
             directiony = -1;
             directionx = 0;
         }
-        _compRigidbody2D.velocity = new Vector2(speedx * horizontal, speedy * vertical);
+        _compRigidbody2D.linearVelocity = new Vector2(speedx * horizontal, speedy * vertical);
     }
 }
